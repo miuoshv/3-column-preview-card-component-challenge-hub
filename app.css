@@ -1,5 +1,59 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --lexend-deca: "Lexend Deca", sans-serif;
+  --big-shoulders: "Big Shoulders Display", cursive;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  color: white;
+  width: 90%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.container:first-of-type {
+  background-color: var(--bright-orange);
+}
+
+.container:nth-of-type(2) {
+  background-color: var(--dark-cyan);
+}
+
+.container:nth-of-type(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+h2 {
+  font-family: var(--big-shoulders);
+  font-weight: 700;
+  color: var(--very-light-gray);
+}
+p {
+  font-family: var(--lexend-deca);
+  color: var(--transparent-white);
 }
