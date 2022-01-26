@@ -21,12 +21,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .container {
   color: white;
   width: 85%;
+  max-width: calc(0.85 * 375px);
   padding: 2.6rem;
   display: flex;
   flex-direction: column;
@@ -60,18 +60,39 @@ p {
   color: var(--transparent-white);
   font-size: 15px;
   line-height: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 #learn-button1,
 #learn-button2,
 #learn-button3 {
   width: 60%;
+  max-width: 170px;
   background-color: var(--very-light-gray);
   border-radius: 1.4rem;
   text-align: center;
-  padding: 0.9rem 1.1rem;
+  padding: 0.8rem 1.1rem;
   font-size: 15px;
-  margin-top: -0.5rem;
+  border: var(--very-light-gray) 2px solid;
+}
+#learn-button1:hover,
+#learn-button2:hover,
+#learn-button3:hover {
+  cursor: pointer;
+  border: white 2px solid;
+  color: var(--very-light-gray);
+}
+
+#learn-button1:hover {
+  background-color: var(--bright-orange);
+}
+
+#learn-button2:hover {
+  background-color: var(--dark-cyan);
+}
+
+#learn-button3:hover {
+  background-color: var(--very-dark-cyan);
 }
 
 #learn-button1 {
@@ -95,4 +116,43 @@ footer {
 
 .attribution a {
   text-decoration: none;
+}
+
+@media (min-width: 960px) {
+  body {
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 1rem;
+  }
+
+  .container:first-of-type {
+    background-color: var(--bright-orange);
+    border-radius: 8px 0 0 8px;
+  }
+
+  .container:nth-of-type(3) {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .container {
+    width: 305px;
+  }
+
+  p {
+    margin-bottom: 3.6rem;
+    width: 95%;
+  }
+
+  #learn-button1,
+  #learn-button2,
+  #learn-button3 {
+    width: 160px;
+    margin-bottom: 1rem;
+  }
 }
