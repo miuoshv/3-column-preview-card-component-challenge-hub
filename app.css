@@ -118,7 +118,7 @@ footer {
   text-decoration: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 873px) {
   body {
     flex-direction: row;
     align-items: center;
